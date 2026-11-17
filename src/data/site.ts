@@ -33,14 +33,16 @@ export const FULL_ADDRESS = `${SITE.address.street}, ${SITE.address.neighborhood
 /* Páginas do site (cada uma vira um HTML próprio no build)            */
 /* ------------------------------------------------------------------ */
 
-export type PageId = 'inicio' | 'chale' | 'galeria' | 'localizacao' | 'reservas' | 'duvidas' | '404';
+export type PageId = 'inicio' | 'chale' | 'galeria' | 'monteverde' | 'localizacao' | 'reservas' | 'duvidas' | '404';
 
 interface PageMeta {
   id: PageId;
   path: string;
-  /** Nome curto no menu e no breadcrumb. */
+  /** Nome curto no menu e no caminho de navegação. */
   label: string;
+  /** <title>: até ~60 caracteres, com "Monte Verde" para a busca local. */
   title: string;
+  /** Meta description: até ~155 caracteres, com uma chamada para ação. */
   description: string;
 }
 
@@ -49,56 +51,64 @@ export const PAGES: PageMeta[] = [
     id: 'inicio',
     path: '/',
     label: 'Início',
-    title: 'Chalé em Monte Verde com lareira para 6 pessoas | Chalé Gran Reserva',
+    title: 'Chalé em Monte Verde MG com lareira | Chalé Gran Reserva',
     description:
-      'Chalé de madeira com lareira, 2 quartos e 2 banheiros, para até 6 pessoas, entre araucárias nas Villas de Monte Verde (MG). Reserve direto com o anfitrião pelo WhatsApp.',
+      'Chalé de madeira com lareira para até 6 pessoas em Monte Verde, MG: 2 quartos, 2 banheiros, cozinha e jardim entre araucárias. Reserve pelo WhatsApp.',
   },
   {
     id: 'chale',
     path: '/o-chale/',
     label: 'O Chalé',
-    title: 'O chalé: quartos, cozinha, lareira e comodidades | Chalé Gran Reserva',
+    title: 'Chalé para 6 pessoas em Monte Verde, MG | Gran Reserva',
     description:
-      'Conheça os ambientes do Chalé Gran Reserva em Monte Verde: sala com lareira, 2 quartos, 2 banheiros, cozinha equipada, varanda, deck e jardim. Regras da casa e horários.',
+      'Sala com lareira, 2 quartos, 2 banheiros, cozinha equipada, varanda, deck e jardim. Veja as comodidades e as regras do chalé em Monte Verde, MG.',
   },
   {
     id: 'galeria',
     path: '/galeria/',
     label: 'Galeria',
-    title: 'Fotos do chalé em Monte Verde | Chalé Gran Reserva',
+    title: 'Fotos do chalé em Monte Verde, MG | Chalé Gran Reserva',
     description:
-      'Fotos reais do Chalé Gran Reserva: fachada de madeira entre araucárias, sala com lareira, quartos, cozinha, banheiros, deck e jardim em Monte Verde, MG.',
+      '24 fotos reais do Chalé Gran Reserva em Monte Verde: fachada entre araucárias, sala com lareira, quartos, cozinha, banheiros, deck e jardim.',
+  },
+  {
+    id: 'monteverde',
+    path: '/o-que-fazer-em-monte-verde/',
+    label: 'Monte Verde',
+    title: 'O que fazer em Monte Verde, MG: trilhas e passeios',
+    description:
+      'Trilhas da Pedra Redonda e da Pedra Partida, Avenida Monte Verde, melhor época para ir e passeios a poucos minutos do Chalé Gran Reserva.',
   },
   {
     id: 'localizacao',
     path: '/localizacao/',
     label: 'Localização',
-    title: 'Localização e como chegar | Chalé Gran Reserva, Monte Verde',
+    title: 'Como chegar ao chalé em Monte Verde, MG | Gran Reserva',
     description:
-      'O Chalé Gran Reserva fica nas Villas de Monte Verde, a cerca de 5 km do centro. Veja o mapa, as distâncias e o que fazer por perto.',
+      'Endereço, mapa e como chegar de São Paulo, Campinas e Belo Horizonte ao Chalé Gran Reserva, nas Villas de Monte Verde, a 5 km do centro.',
   },
   {
     id: 'reservas',
     path: '/reservas/',
     label: 'Reservas',
-    title: 'Reservas pelo WhatsApp | Chalé Gran Reserva, Monte Verde',
+    title: 'Reservar chalé em Monte Verde pelo WhatsApp | Gran Reserva',
     description:
-      'Consulte datas e valores do Chalé Gran Reserva direto com o anfitrião pelo WhatsApp (16) 98135-6900. Check-in das 14h às 22h, check-out até 11h.',
+      'Consulte datas e valores do Chalé Gran Reserva em Monte Verde direto com o anfitrião: WhatsApp (16) 98135-6900. Check-in 14h às 22h.',
   },
   {
     id: 'duvidas',
     path: '/duvidas/',
     label: 'Dúvidas',
-    title: 'Perguntas frequentes | Chalé Gran Reserva, Monte Verde',
+    title: 'Dúvidas sobre o chalé em Monte Verde | Chalé Gran Reserva',
     description:
-      'Quantas pessoas cabem, horários, pets, lareira, estacionamento e como reservar o Chalé Gran Reserva em Monte Verde.',
+      'Quantas pessoas cabem, horários, pets, lareira, estacionamento, melhor época e como chegar ao Chalé Gran Reserva em Monte Verde, MG.',
   },
   {
     id: '404',
     path: '/404',
     label: 'Página não encontrada',
     title: 'Página não encontrada | Chalé Gran Reserva',
-    description: 'A página que você procurou não existe. Volte ao início do site do Chalé Gran Reserva.',
+    description: 'A página que você procurou não existe. Volte ao início do site do Chalé Gran Reserva em Monte Verde.',
   },
 ];
 
@@ -281,6 +291,64 @@ export const EXPERIENCES = [
   { title: 'Passeios ao ar livre', text: 'Quadriciclo, falcoaria e cavalgadas a poucos minutos do chalé.' },
 ] as const;
 
+/** Como chegar (fontes: guias de viagem Melhores Destinos, Esse Mundo é Nosso, Viciada em Viajar). */
+export const ROUTES = [
+  {
+    from: 'São Paulo',
+    distance: 'cerca de 165 km',
+    time: 'cerca de 2h40',
+    how: 'Pela Rodovia Fernão Dias (BR-381) no sentido Belo Horizonte. Depois da divisa com Minas, saia em Camanducaia e siga os cerca de 30 km de serra asfaltada até Monte Verde.',
+  },
+  {
+    from: 'Campinas',
+    distance: 'cerca de 160 km',
+    time: 'cerca de 2h30',
+    how: 'Pela Rodovia Dom Pedro I (SP-065) no sentido Jacareí até a Fernão Dias, e depois como quem vem de São Paulo.',
+  },
+  {
+    from: 'Belo Horizonte',
+    distance: 'cerca de 480 km',
+    time: '6 a 7 horas',
+    how: 'Pela Fernão Dias (BR-381) no sentido São Paulo, passando por Pouso Alegre e Cambuí, até a saída para Camanducaia.',
+  },
+  {
+    from: 'De avião',
+    distance: 'Aeroporto de Guarulhos: 156 km',
+    time: 'cerca de 2h de carro',
+    how: 'Guarulhos fica na saída para a Fernão Dias e é o aeroporto mais prático; Viracopos, em Campinas, é outra opção. O carro é o jeito mais fácil de chegar.',
+  },
+] as const;
+
+export const TRAILS = [
+  {
+    name: 'Pedra Redonda',
+    text: 'A trilha mais procurada de Monte Verde. É considerada fácil e leva cerca de 1h30 ida e volta, com vista ampla da serra lá de cima.',
+  },
+  {
+    name: 'Pedra Partida',
+    text: 'Mais exigente: chega a cerca de 2.046 m de altitude, tem trechos íngremes e nível médio. Vale ir com calçado de trilha e sem pressa.',
+  },
+  {
+    name: 'Chapéu do Bispo e Platô',
+    text: 'Trilhas curtas e fáceis, boas para quem quer caminhar entre araucárias sem um dia inteiro de esforço.',
+  },
+] as const;
+
+export const SEASONS = [
+  {
+    name: 'Inverno (junho a agosto)',
+    text: 'Alta temporada. É a época mais seca e mais fria, com noites que podem chegar perto de zero grau. A vila fica cheia: reserve com antecedência.',
+  },
+  {
+    name: 'Primavera e outono',
+    text: 'Dias amenos, menos movimento e preços melhores. Boa época para trilhas e para aproveitar a vila com calma.',
+  },
+  {
+    name: 'Verão (dezembro a março)',
+    text: 'Época mais chuvosa. Dá para fazer quase tudo, mas as trilhas fecham em dias de chuva forte.',
+  },
+] as const;
+
 interface GuestReview {
   author: string;
   origin?: string;
@@ -318,6 +386,22 @@ export const FAQS = [
   {
     q: 'Tem Wi-Fi?',
     a: 'Sim, o Wi-Fi é gratuito.',
+  },
+  {
+    q: 'Monte Verde fica em que estado?',
+    a: 'Em Minas Gerais. Monte Verde é um distrito de Camanducaia, no Sul de Minas, na Serra da Mantiqueira, perto da divisa com São Paulo.',
+  },
+  {
+    q: 'Quanto tempo de São Paulo até Monte Verde?',
+    a: 'São cerca de 165 km, perto de 2h40 de carro pela Rodovia Fernão Dias até Camanducaia, e depois cerca de 30 km de serra até Monte Verde.',
+  },
+  {
+    q: 'Qual a melhor época para ir a Monte Verde?',
+    a: 'O inverno (junho a agosto) é a alta temporada, com frio e menos chuva; reserve com antecedência. Primavera e outono têm dias amenos e menos movimento.',
+  },
+  {
+    q: 'O chalé é bom para famílias com crianças?',
+    a: 'Sim. São 2 quartos, cozinha completa, jardim e estacionamento dentro do terreno, e o chalé é alugado inteiro para o seu grupo.',
   },
   {
     q: 'Como faço para reservar?',

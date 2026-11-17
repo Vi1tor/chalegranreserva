@@ -37,7 +37,9 @@ const lodging = {
     addressCountry: SITE.address.country,
   },
   containedInPlace: { '@type': 'Place', name: 'Monte Verde, Camanducaia - MG' },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.mapsQuery)}`,
   sameAs: [SITE.instagramUrl, SITE.bookingUrl],
+  knowsLanguage: 'pt-BR',
   numberOfRooms: 2,
   petsAllowed: 'Mediante consulta',
   smokingAllowed: false,
@@ -63,6 +65,21 @@ const faqPage = {
   mainEntity: FAQS.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 
+const guideArticle = (page) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'O que fazer em Monte Verde, MG: trilhas, Avenida Monte Verde e melhor época',
+  description: page.description,
+  inLanguage: 'pt-BR',
+  mainEntityOfPage: abs(page.path),
+  image: abs('/images/vista-varanda-serra.webp'),
+  datePublished: '2026-11-17',
+  dateModified: new Date().toISOString().slice(0, 10),
+  author: { '@type': 'Organization', name: SITE.name, url: `${SITE_URL}/` },
+  publisher: { '@type': 'Organization', name: SITE.name, logo: { '@type': 'ImageObject', url: abs('/brand/logo-512.webp') } },
+  about: { '@type': 'TouristDestination', name: 'Monte Verde, Camanducaia - MG', containedInPlace: { '@type': 'State', name: 'Minas Gerais' } },
+});
+
 const breadcrumb = (page) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -85,6 +102,8 @@ for (const page of PAGES) {
   if (page.id === 'inicio') blocks.push(ld(website), ld(lodging));
   else if (!isNotFound) blocks.push(ld(breadcrumb(page)));
   if (page.id === 'duvidas') blocks.push(ld(faqPage));
+  if (page.id === 'localizacao') blocks.push(ld(lodging));
+  if (page.id === 'monteverde') blocks.push(ld(guideArticle(page)));
 
   const head = [
     `<title>${esc(page.title)}</title>`,

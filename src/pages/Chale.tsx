@@ -7,7 +7,7 @@ export function Chale() {
       <PageHeader
         page="chale"
         image="sala-poltronas-tv"
-        title="O chalé"
+        title="O chalé em Monte Verde"
         intro="Um chalé de madeira com sala e lareira, dois quartos, dois banheiros, cozinha equipada, varanda, deck e jardim."
       />
 

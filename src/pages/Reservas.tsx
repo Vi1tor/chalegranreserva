@@ -10,7 +10,7 @@ export function Reservas() {
       <PageHeader
         page="reservas"
         image="sala-lareira"
-        title="Reservas"
+        title="Reserve o chalé em Monte Verde"
         intro="A reserva é feita direto com o anfitrião, sem taxa de plataforma. Mande as datas e o número de pessoas."
       />
 

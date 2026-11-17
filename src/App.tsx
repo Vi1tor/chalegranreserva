@@ -8,6 +8,7 @@ import { Duvidas } from './pages/Duvidas';
 import { Galeria } from './pages/Galeria';
 import { Home } from './pages/Home';
 import { Localizacao } from './pages/Localizacao';
+import { MonteVerde } from './pages/MonteVerde';
 import { NotFound } from './pages/NotFound';
 import { Reservas } from './pages/Reservas';
 
@@ -15,6 +16,7 @@ const VIEWS: Record<PageId, ComponentType> = {
   inicio: Home,
   chale: Chale,
   galeria: Galeria,
+  monteverde: MonteVerde,
   localizacao: Localizacao,
   reservas: Reservas,
   duvidas: Duvidas,

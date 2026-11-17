@@ -23,8 +23,10 @@ export function Home() {
 
         <div className="container-site pt-32 pb-16 sm:pb-24">
           <div className="max-w-3xl motion-safe:animate-hero-in">
-            <p className="text-lg text-paper/90">Villas de Monte Verde, Serra da Mantiqueira</p>
-            <h1 className="mt-3 text-5xl leading-[1.05] sm:text-7xl lg:text-[5.5rem]">Chalé Gran Reserva</h1>
+            <h1>
+              <span className="block font-sans text-lg font-normal text-paper/90">Chalé em Monte Verde, Minas Gerais</span>
+              <span className="mt-3 block text-5xl leading-[1.05] sm:text-7xl lg:text-[5.5rem]">Chalé Gran Reserva</span>
+            </h1>
             <p className="mt-6 max-w-xl text-xl leading-relaxed text-paper/90">
               Chalé de madeira com lareira, para até 6 pessoas, entre araucárias. A casa inteira é sua durante a estadia.
             </p>
@@ -54,6 +56,17 @@ export function Home() {
               <p>
                 Da varanda de cima se vê a serra. O chalé é alugado inteiro, só para o seu grupo, e recebe até 6
                 pessoas.
+              </p>
+              <p>
+                Planejando a viagem? Veja{' '}
+                <a href={pagePath('monteverde')} className="link">
+                  o que fazer em Monte Verde
+                </a>{' '}
+                e{' '}
+                <a href={pagePath('localizacao')} className="link">
+                  como chegar ao chalé
+                </a>
+                .
               </p>
             </div>
             <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-forest/15 pt-6 sm:grid-cols-4">

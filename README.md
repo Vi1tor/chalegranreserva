@@ -46,3 +46,21 @@ ser validados pelo proprietário.
 3. Crie ou reivindique o Perfil da Empresa no Google com o mesmo nome, endereço e telefone do site.
 4. Coloque o link do site na bio do Instagram e no anúncio do Booking.
 # chalegranreserva
+
+## SEO local: o que fazer fora do site
+
+O site já está otimizado (título e H1 com "Monte Verde" em todas as páginas, conteúdo próprio por página,
+dados estruturados, sitemap, telefone clicável). Para aparecer no mapa do Google, o que mais pesa está fora do site:
+
+1. **Perfil da Empresa no Google** (business.google.com): crie ou reivindique "Chalé Gran Reserva", escolha a
+   categoria principal mais específica (ex.: "Chalé"), use exatamente o mesmo nome, endereço e telefone do site,
+   coloque o link do site, suba fotos reais e marque o pino exato no mapa.
+2. **Avaliações**: peça avaliação no Google a cada hóspede, de forma constante (sem longos intervalos), e responda todas.
+   Nunca filtre quem pode avaliar.
+3. **Bing Places** e **Apple Business Connect**: mesmos dados. O Bing alimenta o ChatGPT e o Copilot.
+4. **Mesmos dados em todo lugar**: Booking, Airbnb, TripAdvisor, Instagram (link do site na bio) e guias de Monte Verde.
+5. **Coordenadas exatas**: copie latitude/longitude do pino no Google Maps e passe para incluir no `geo` dos dados estruturados.
+6. **Search Console**: adicione o domínio, envie `https://SEU-DOMINIO/sitemap.xml` e peça indexação das páginas.
+7. **Links locais**: blogs e guias de Monte Verde ("melhores chalés", "chalés com lareira") citando o chalé com link.
+
+Resultados de busca local levam semanas ou meses para aparecer. Ninguém pode garantir posição.

@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 import { FULL_ADDRESS, NAV_PAGES, SITE, pagePath } from '../data/site';
 import { whatsappLink } from '../utils/whatsapp';
 import { InstagramIcon, WhatsAppIcon } from './icons';
@@ -24,6 +24,12 @@ export function Footer() {
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-copper-light">
                 <WhatsAppIcon className="h-4 w-4 shrink-0 text-copper-light" />
                 {SITE.whatsappDisplay}
+              </a>
+            </li>
+            <li>
+              <a href={`tel:+55${SITE.whatsappNumber}`} className="flex items-center gap-3 hover:text-copper-light">
+                <Phone className="h-4 w-4 shrink-0 text-copper-light" aria-hidden="true" />
+                Ligar: {SITE.whatsappDisplay}
               </a>
             </li>
             <li>
