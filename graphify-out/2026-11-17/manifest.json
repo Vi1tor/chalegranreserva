@@ -1,0 +1,488 @@
+{
+  "package.json": {
+    "mtime": 1794933253.1077878,
+    "seen": 1794933404.8283122,
+    "ast_hash": "4dca6d58212087636e500601b974098c",
+    "semantic_hash": ""
+  },
+  "src/App.tsx": {
+    "mtime": 1794934468.0014117,
+    "seen": 1794934573.839556,
+    "ast_hash": "626faad84fd44dcd81dc4949d4a3d8ae",
+    "semantic_hash": ""
+  },
+  "src/components/Footer.tsx": {
+    "mtime": 1794934298.8682299,
+    "seen": 1794934573.8395572,
+    "ast_hash": "98f72d002630e2fcc83ecda1b79871ff",
+    "semantic_hash": ""
+  },
+  "src/components/Navbar.tsx": {
+    "mtime": 1794934360.0726159,
+    "seen": 1794934573.839561,
+    "ast_hash": "7b9ab6c83cbcca902b757bf7ee99e4ac",
+    "semantic_hash": ""
+  },
+  "src/main.tsx": {
+    "mtime": 1794934435.1995196,
+    "seen": 1794934573.8395698,
+    "ast_hash": "f300c3a6ddab641dd3cfc07be22e5244",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1794942102.0,
+    "seen": 1794931584.192339,
+    "ast_hash": "c9ce11f97b614219001b418db5fe4190",
+    "semantic_hash": ""
+  },
+  "vite.config.ts": {
+    "mtime": 1794932593.3707404,
+    "seen": 1794932715.6335921,
+    "ast_hash": "471d3f9e3c2b1b5001ee1f16ea35808e",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1794934570.7779152,
+    "seen": 1794934573.839583,
+    "ast_hash": "57fef13a599c287c5c5b4d7c8d4471a9",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1794934889.934529,
+    "seen": 1794934904.9187489,
+    "ast_hash": "453b1259dd41dc44fb6d7b4ad4ea857c",
+    "semantic_hash": ""
+  },
+  "src/components/Lightbox.tsx": {
+    "mtime": 1794933675.608717,
+    "seen": 1794933829.414089,
+    "ast_hash": "b8273d2c907404e7e14aae48bb1b46e7",
+    "semantic_hash": ""
+  },
+  "src/data/site.ts": {
+    "mtime": 1794934889.93312,
+    "seen": 1794934904.91873,
+    "ast_hash": "eb719a89a42d257c7246c77c111b752a",
+    "semantic_hash": ""
+  },
+  "src/utils/whatsapp.ts": {
+    "mtime": 1794934302.8410976,
+    "seen": 1794934573.8395789,
+    "ast_hash": "65c065cafff86ecdca7e3465ec2c4c23",
+    "semantic_hash": ""
+  },
+  "public/llms.txt": {
+    "mtime": 1794934889.934331,
+    "seen": 1794934904.918751,
+    "ast_hash": "1b4d3d574bd01a6a7e27a14c8be76bff",
+    "semantic_hash": ""
+  },
+  "public/apple-touch-icon.png": {
+    "mtime": 1794933730.813728,
+    "seen": 1794933829.414112,
+    "ast_hash": "0bddd4d52fe06db07ab30fbc65f276b7",
+    "semantic_hash": ""
+  },
+  "public/favicon.png": {
+    "mtime": 1794933730.8378346,
+    "seen": 1794933829.4141161,
+    "ast_hash": "e71ab9b8b304c250ded39f94aaf12848",
+    "semantic_hash": ""
+  },
+  "public/images/banheiro-box-sm.webp": {
+    "mtime": 1794932219.4823189,
+    "seen": 1794932715.633698,
+    "ast_hash": "131a8c932ce7f9393a2570169b553f27",
+    "semantic_hash": ""
+  },
+  "public/images/banheiro-box.webp": {
+    "mtime": 1794932219.3937752,
+    "seen": 1794932715.6336992,
+    "ast_hash": "950b47cfab51981ba842c65aa10cc2a3",
+    "semantic_hash": ""
+  },
+  "public/images/banheiro-suite-sm.webp": {
+    "mtime": 1794932219.6752012,
+    "seen": 1794932715.6337001,
+    "ast_hash": "b95af7ef307c64aba84cd580bb11b04b",
+    "semantic_hash": ""
+  },
+  "public/images/banheiro-suite.webp": {
+    "mtime": 1794932219.6098087,
+    "seen": 1794932715.633701,
+    "ast_hash": "b6095362e5450e05eeb001db98a34665",
+    "semantic_hash": ""
+  },
+  "public/images/chale-fachada-araucarias-sm.webp": {
+    "mtime": 1794932212.364753,
+    "seen": 1794932715.6337018,
+    "ast_hash": "e7d878b0849cc194cb2628a4304d0b19",
+    "semantic_hash": ""
+  },
+  "public/images/chale-fachada-araucarias.webp": {
+    "mtime": 1794932212.2221172,
+    "seen": 1794932715.633703,
+    "ast_hash": "ff9c4dc3b9a8b8327387cd16e37081ed",
+    "semantic_hash": ""
+  },
+  "public/images/chale-jardim-escadaria.webp": {
+    "mtime": 1794932214.0112133,
+    "seen": 1794932715.633703,
+    "ast_hash": "3f5cbfc98a4ab367513c55f4f39782c3",
+    "semantic_hash": ""
+  },
+  "public/images/chale-jardim-flores-sm.webp": {
+    "mtime": 1794932213.9084768,
+    "seen": 1794932715.633704,
+    "ast_hash": "72450a6f6a8176c1cefb4379f5fc2947",
+    "semantic_hash": ""
+  },
+  "public/images/chale-jardim-flores.webp": {
+    "mtime": 1794932213.7535152,
+    "seen": 1794932715.633705,
+    "ast_hash": "dbd7433ad65b5815c43e521d211f3243",
+    "semantic_hash": ""
+  },
+  "public/images/chale-portao-entrada-sm.webp": {
+    "mtime": 1794932213.4103749,
+    "seen": 1794932715.633707,
+    "ast_hash": "cb58be87c6f22a98deb016c01fcb7b1e",
+    "semantic_hash": ""
+  },
+  "public/images/chale-portao-entrada.webp": {
+    "mtime": 1794932213.2794695,
+    "seen": 1794932715.633708,
+    "ast_hash": "1d209bd69656591018b11fd704911bf7",
+    "semantic_hash": ""
+  },
+  "public/images/chale-varanda-entrada-sm.webp": {
+    "mtime": 1794932212.907931,
+    "seen": 1794932715.633709,
+    "ast_hash": "b9f13e967b811651640a3c0b51483f2d",
+    "semantic_hash": ""
+  },
+  "public/images/chale-varanda-entrada.webp": {
+    "mtime": 1794932212.7822943,
+    "seen": 1794932715.6337101,
+    "ast_hash": "ceec69d8c9b722238c5fca965c2ecaa4",
+    "semantic_hash": ""
+  },
+  "public/images/cozinha-armario-rustico-sm.webp": {
+    "mtime": 1794932218.099536,
+    "seen": 1794932715.633711,
+    "ast_hash": "36848a9f0a82932baab0644b9bb628ac",
+    "semantic_hash": ""
+  },
+  "public/images/cozinha-armario-rustico.webp": {
+    "mtime": 1794932217.9850285,
+    "seen": 1794932715.633712,
+    "ast_hash": "5a7b8666d5e5ac77eaa99fcdc9e8120e",
+    "semantic_hash": ""
+  },
+  "public/images/cozinha-copa-sm.webp": {
+    "mtime": 1794932217.6652634,
+    "seen": 1794932715.633713,
+    "ast_hash": "86745c49fd634750636b4f10f831f359",
+    "semantic_hash": ""
+  },
+  "public/images/cozinha-copa.webp": {
+    "mtime": 1794932217.564696,
+    "seen": 1794932715.633714,
+    "ast_hash": "6e6e8c45d155001b2560ba91e9bc9a82",
+    "semantic_hash": ""
+  },
+  "public/images/cozinha-equipada-sm.webp": {
+    "mtime": 1794932217.266724,
+    "seen": 1794932715.633715,
+    "ast_hash": "0891e5112477c090ea7977db6624346f",
+    "semantic_hash": ""
+  },
+  "public/images/cozinha-equipada.webp": {
+    "mtime": 1794932217.1745632,
+    "seen": 1794932715.6337159,
+    "ast_hash": "c29f34a1345148b11f190f63170799ce",
+    "semantic_hash": ""
+  },
+  "public/images/deck-madeira-mata-sm.webp": {
+    "mtime": 1794932214.6177917,
+    "seen": 1794932715.633717,
+    "ast_hash": "c1ed2852d08ca82f234dcc4d38ca00fc",
+    "semantic_hash": ""
+  },
+  "public/images/deck-madeira-mata.webp": {
+    "mtime": 1794932214.4836326,
+    "seen": 1794932715.633718,
+    "ast_hash": "fb7acb66d73f822d2fd562b8e494e498",
+    "semantic_hash": ""
+  },
+  "public/images/escada-madeira-sm.webp": {
+    "mtime": 1794932219.9142573,
+    "seen": 1794932715.633719,
+    "ast_hash": "78472e0b150664c79ba5e80c5631305c",
+    "semantic_hash": ""
+  },
+  "public/images/escada-madeira.webp": {
+    "mtime": 1794932219.8178587,
+    "seen": 1794932715.6337202,
+    "ast_hash": "29f07ce90478ef954f6666d8f44b6833",
+    "semantic_hash": ""
+  },
+  "public/images/estrada-araucarias-sm.webp": {
+    "mtime": 1794932220.6483898,
+    "seen": 1794932715.633721,
+    "ast_hash": "b528212ed64c55742a386c1afba303f7",
+    "semantic_hash": ""
+  },
+  "public/images/mesa-jantar-sm.webp": {
+    "mtime": 1794932216.9316463,
+    "seen": 1794932715.633724,
+    "ast_hash": "c33dce3b3e8e179b765d97419f7350d1",
+    "semantic_hash": ""
+  },
+  "public/images/mesa-jantar.webp": {
+    "mtime": 1794932216.832792,
+    "seen": 1794932715.633726,
+    "ast_hash": "983e5b327491b20537764f82eb8daa86",
+    "semantic_hash": ""
+  },
+  "public/images/mezanino-sala-sm.webp": {
+    "mtime": 1794932220.2701905,
+    "seen": 1794932715.633728,
+    "ast_hash": "3a371c7778b5a2fdf769970031f3df1d",
+    "semantic_hash": ""
+  },
+  "public/images/mezanino-sala.webp": {
+    "mtime": 1794932220.1751888,
+    "seen": 1794932715.63373,
+    "ast_hash": "8f63a758e75922d0d555280439e59f70",
+    "semantic_hash": ""
+  },
+  "public/images/og-image.jpg": {
+    "mtime": 1794932221.0895376,
+    "seen": 1794932715.633732,
+    "ast_hash": "66c5d63a9d994c0453ce35b138903354",
+    "semantic_hash": ""
+  },
+  "public/images/porta-vista-jardim-sm.webp": {
+    "mtime": 1794932215.4098847,
+    "seen": 1794932715.633736,
+    "ast_hash": "77bea77cb7aba9a12cd500b3030449dc",
+    "semantic_hash": ""
+  },
+  "public/images/porta-vista-jardim.webp": {
+    "mtime": 1794932215.3051195,
+    "seen": 1794932715.6337368,
+    "ast_hash": "403beaa1e6a726f86b490f2c77c1e7f5",
+    "semantic_hash": ""
+  },
+  "public/images/quarto-azul-sm.webp": {
+    "mtime": 1794932218.9319897,
+    "seen": 1794932715.633738,
+    "ast_hash": "2e370e58f0aaba4b58e96d66202dc704",
+    "semantic_hash": ""
+  },
+  "public/images/quarto-azul.webp": {
+    "mtime": 1794932218.8460379,
+    "seen": 1794932715.633739,
+    "ast_hash": "ce74d632d0731b47e022a8f81fcb5f42",
+    "semantic_hash": ""
+  },
+  "public/images/quarto-solteiros-sm.webp": {
+    "mtime": 1794932218.6135252,
+    "seen": 1794932715.63374,
+    "ast_hash": "ad37ba4ec7e650e0321bc109ca9d9cfb",
+    "semantic_hash": ""
+  },
+  "public/images/quarto-solteiros.webp": {
+    "mtime": 1794932218.5225775,
+    "seen": 1794932715.6337411,
+    "ast_hash": "30e0e458cde9293f00b89d0821237cd0",
+    "semantic_hash": ""
+  },
+  "public/images/quarto-vista-sm.webp": {
+    "mtime": 1794932219.2680793,
+    "seen": 1794932715.633742,
+    "ast_hash": "687f9cda16b8cadc825e8e43ef4d4fc7",
+    "semantic_hash": ""
+  },
+  "public/images/quarto-vista.webp": {
+    "mtime": 1794932219.175839,
+    "seen": 1794932715.633743,
+    "ast_hash": "3cde9d20a4dbb4a55d4b25d604a77373",
+    "semantic_hash": ""
+  },
+  "public/images/sala-estar-sm.webp": {
+    "mtime": 1794932215.9443066,
+    "seen": 1794932715.6337438,
+    "ast_hash": "6b8f1adff89e5afebdd39a42c4be69b8",
+    "semantic_hash": ""
+  },
+  "public/images/sala-estar.webp": {
+    "mtime": 1794932215.8485453,
+    "seen": 1794932715.633745,
+    "ast_hash": "9a5c69098c268222d8c54636d936778c",
+    "semantic_hash": ""
+  },
+  "public/images/sala-jantar-sm.webp": {
+    "mtime": 1794932216.5526783,
+    "seen": 1794932715.6337469,
+    "ast_hash": "e5df14b77ebbea08bb1c017e88e8bd9b",
+    "semantic_hash": ""
+  },
+  "public/images/sala-jantar.webp": {
+    "mtime": 1794932216.4513361,
+    "seen": 1794932715.633748,
+    "ast_hash": "d57204ecf44a5b3a938958f2055c31cc",
+    "semantic_hash": ""
+  },
+  "public/images/sala-lareira-sm.webp": {
+    "mtime": 1794932215.7012818,
+    "seen": 1794932715.633748,
+    "ast_hash": "939534695dae56d2eb13dc26552b2504",
+    "semantic_hash": ""
+  },
+  "public/images/sala-lareira.webp": {
+    "mtime": 1794932215.5833607,
+    "seen": 1794932715.63375,
+    "ast_hash": "5c9fa7233981bb8fbdf7b1ed8c82b365",
+    "semantic_hash": ""
+  },
+  "public/images/sala-poltronas-tv-sm.webp": {
+    "mtime": 1794932216.2976348,
+    "seen": 1794932715.6337512,
+    "ast_hash": "a4c41c6b527e281b526d02aeada1633d",
+    "semantic_hash": ""
+  },
+  "public/images/sala-poltronas-tv.webp": {
+    "mtime": 1794932216.2030292,
+    "seen": 1794932715.633752,
+    "ast_hash": "b1e23fe9da258e9965b8a5643028e920",
+    "semantic_hash": ""
+  },
+  "public/images/suite-casal-sm.webp": {
+    "mtime": 1794932218.347107,
+    "seen": 1794932715.633752,
+    "ast_hash": "750d993178526e96b6c1b037fc492c66",
+    "semantic_hash": ""
+  },
+  "public/images/suite-casal.webp": {
+    "mtime": 1794932218.2490735,
+    "seen": 1794932715.633754,
+    "ast_hash": "d96370131287bfe982be0e917cb6d787",
+    "semantic_hash": ""
+  },
+  "public/images/vista-varanda-serra-sm.webp": {
+    "mtime": 1794932215.1590688,
+    "seen": 1794932715.633754,
+    "ast_hash": "7151d16bd59b68b18df6970b9f91f75e",
+    "semantic_hash": ""
+  },
+  "public/images/vista-varanda-serra.webp": {
+    "mtime": 1794932215.0174935,
+    "seen": 1794932715.633756,
+    "ast_hash": "ccf1e341d473b2d8a71c1861cdf14b6b",
+    "semantic_hash": ""
+  },
+  "scripts/prerender.mjs": {
+    "mtime": 1794934889.934959,
+    "seen": 1794934904.918713,
+    "ast_hash": "fc7a810eb0436158a9bd614b9e5f04f5",
+    "semantic_hash": ""
+  },
+  "src/components/icons.tsx": {
+    "mtime": 1794933372.6042738,
+    "seen": 1794933404.8283432,
+    "ast_hash": "fb1ac9fa6f46fea0fc00b67dc481ff9b",
+    "semantic_hash": ""
+  },
+  "src/entry-server.tsx": {
+    "mtime": 1794934435.227358,
+    "seen": 1794934573.8395689,
+    "ast_hash": "d6052977327c932866a7cc22d8f9d26f",
+    "semantic_hash": ""
+  },
+  "design/emblema-original.png": {
+    "mtime": 1794932021.0857275,
+    "seen": 1794933404.8283572,
+    "ast_hash": "3189ea50c4e389ffa87f87d6399792a3",
+    "semantic_hash": ""
+  },
+  "design/logo-original.png": {
+    "mtime": 1794933698.5318558,
+    "seen": 1794933829.41411,
+    "ast_hash": "492c1137dd7a26190378fd7f0e9c4eb8",
+    "semantic_hash": ""
+  },
+  "public/brand/logo-256.png": {
+    "mtime": 1794933730.777718,
+    "seen": 1794933829.414113,
+    "ast_hash": "cfd77038175489e56e363842adb064ed",
+    "semantic_hash": ""
+  },
+  "public/brand/logo-256.webp": {
+    "mtime": 1794933730.7230642,
+    "seen": 1794933829.414114,
+    "ast_hash": "74400bf364ceaeb27cced80c64e130bd",
+    "semantic_hash": ""
+  },
+  "public/brand/logo-512.webp": {
+    "mtime": 1794933730.6876092,
+    "seen": 1794933829.4141152,
+    "ast_hash": "363baa2d13437d6b73338026a1f75766",
+    "semantic_hash": ""
+  },
+  "src/components/sections.tsx": {
+    "mtime": 1794934553.5345662,
+    "seen": 1794934573.839565,
+    "ast_hash": "d338d7b3cabbba8e37f15cbb16e6118e",
+    "semantic_hash": ""
+  },
+  "src/components/ui.tsx": {
+    "mtime": 1794934763.176467,
+    "seen": 1794934904.9187279,
+    "ast_hash": "02066ee2954e8611be1d8c4f872bec69",
+    "semantic_hash": ""
+  },
+  "src/pages/Chale.tsx": {
+    "mtime": 1794934889.9341264,
+    "seen": 1794934904.918734,
+    "ast_hash": "049bb258dd4df13a5fd4a3139e115f2f",
+    "semantic_hash": ""
+  },
+  "src/pages/Duvidas.tsx": {
+    "mtime": 1794934416.248883,
+    "seen": 1794934573.839572,
+    "ast_hash": "36da68d08949a44d739e0250d203f4ec",
+    "semantic_hash": ""
+  },
+  "src/pages/Galeria.tsx": {
+    "mtime": 1794934416.1471388,
+    "seen": 1794934573.839573,
+    "ast_hash": "e32060ef810e37673438a977b9c1e341",
+    "semantic_hash": ""
+  },
+  "src/pages/Home.tsx": {
+    "mtime": 1794934900.3698568,
+    "seen": 1794934904.9187388,
+    "ast_hash": "53e7b9ed1265a88c89c57f4c24b2cd93",
+    "semantic_hash": ""
+  },
+  "src/pages/Localizacao.tsx": {
+    "mtime": 1794934416.1792798,
+    "seen": 1794934573.839575,
+    "ast_hash": "0932eb8ff88713a0abbeb5cff7b16e12",
+    "semantic_hash": ""
+  },
+  "src/pages/NotFound.tsx": {
+    "mtime": 1794934416.352456,
+    "seen": 1794934573.839576,
+    "ast_hash": "0418bf27748fed94e3d71f9b1ca7b567",
+    "semantic_hash": ""
+  },
+  "src/pages/Reservas.tsx": {
+    "mtime": 1794934416.2148824,
+    "seen": 1794934573.8395772,
+    "ast_hash": "79894dd41c072f1b4f6bcd8f3413c72f",
+    "semantic_hash": ""
+  }
+}

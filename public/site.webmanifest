@@ -1,0 +1,13 @@
+{
+  "name": "Chalé Gran Reserva",
+  "short_name": "Gran Reserva",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f4eee2",
+  "theme_color": "#1f3326",
+  "icons": [
+    { "src": "/brand/logo-256.png", "sizes": "256x256", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
