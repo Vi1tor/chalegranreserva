@@ -33,7 +33,9 @@ ser validados pelo proprietário.
 
 ## Antes de publicar
 
-1. Coloque o domínio real em `.env` (`VITE_SITE_URL`) e em `public/llms.txt`.
+1. Copie `.env.example` para `.env` e coloque o domínio real em `VITE_SITE_URL` (e em `public/llms.txt`).
+   O `.env` não vai para o GitHub; na hospedagem (Vercel, Netlify…) cadastre `VITE_SITE_URL` nas
+   variáveis de ambiente do projeto. Variáveis `VITE_` ficam visíveis no site: nunca guarde senhas nelas.
 2. Preencha `whatsappNumber` em `src/data/site.ts`.
 3. `npm run build` e publique a pasta `dist/` (Vercel, Netlify, Cloudflare Pages…).
 

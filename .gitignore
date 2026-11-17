@@ -1,8 +1,21 @@
+# Dependências e builds (gerados pelo npm / vite)
 node_modules/
 dist/
 dist-server/
 coverage/
-.DS_Store
 *.log
-.env.local
-.env.*.local
+
+# Variáveis de ambiente: nunca vão para o repositório (use .env.example como modelo)
+.env
+.env.*
+!.env.example
+
+# Ferramentas locais
+graphify-out/
+.claude/
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
