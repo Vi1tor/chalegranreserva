@@ -28,8 +28,8 @@ export function MonteVerde() {
                   arquitetura de inspiração europeia.
                 </p>
                 <p>
-                  O Chalé Gran Reserva fica nas Villas de Monte Verde, a cerca de 5 km do centro: perto o bastante para
-                  jantar na avenida e longe o bastante para dormir em silêncio.
+                  O Chalé Gran Reserva fica nas Villas de Monte Verde, a cerca de 5 km do centro. De carro, são poucos
+                  minutos até os restaurantes da avenida.
                 </p>
               </div>
             </section>

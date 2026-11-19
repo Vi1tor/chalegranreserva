@@ -182,7 +182,7 @@ export const PHOTOS: Photo[] = [
   p('quarto-solteiros', 'Quarto com camas de solteiro', 'Quarto com teto inclinado de madeira, camas de solteiro e janela com cortina xadrez', 'quartos', 1280, 719),
   p('deck-madeira-mata', 'Deck', 'Deck de madeira com escada e guarda-corpo em X, junto à mata', 'externo', 1599, 899),
   p('sala-jantar', 'Mesa de jantar', 'Mesa de jantar de madeira com cadeiras, cristaleira e pratos decorativos na parede', 'sala', 1024, 768),
-  p('banheiro-box', 'Banheiro', 'Banheiro com box de vidro e revestimento de pastilhas cinza', 'banheiros', 768, 1024),
+  p('banheiro-box', 'Banheiro', 'Banheiro do chalé com revestimento de pastilhas cinza', 'banheiros', 768, 1024),
   p('vista-varanda-serra', 'Vista da varanda', 'Vista da varanda de cima para o jardim e as montanhas', 'externo', 1599, 899),
   p('sala-poltronas-tv', 'Poltronas e lareira', 'Poltronas estampadas e sofá virados para a lareira de pedra', 'sala', 1599, 899),
   p('quarto-vista', 'Quarto com janela', 'Quarto com camas arrumadas e janela grande para fora', 'quartos', 899, 1599),
@@ -191,12 +191,46 @@ export const PHOTOS: Photo[] = [
   p('mesa-jantar', 'Canto do jantar', 'Mesa de jantar com vaso de flores e cristaleira de madeira', 'sala', 1599, 899),
   p('porta-vista-jardim', 'Porta para o jardim', 'Porta dupla de madeira aberta para o gramado e as montanhas', 'externo', 768, 1024),
   p('quarto-azul', 'Cama de solteiro', 'Cama de solteiro com colcha azul e toalhas dobradas', 'quartos', 899, 1599),
-  p('banheiro-suite', 'Segundo banheiro', 'Segundo banheiro com box de vidro e gabinete de madeira', 'banheiros', 719, 1280),
+  p('banheiro-suite', 'Segundo banheiro', 'Segundo banheiro do chalé com gabinete de madeira', 'banheiros', 719, 1280),
   p('mezanino-sala', 'Sofá junto à escada', 'Sofá e poltronas ao lado da escada de madeira', 'sala', 1599, 899),
   p('cozinha-armario-rustico', 'Armário da cozinha', 'Armário rústico de madeira e geladeira na cozinha', 'cozinha', 1599, 899),
   p('escada-madeira', 'Escada', 'Escada de madeira com balaústres torneados', 'sala', 768, 1024),
   p('chale-jardim-flores', 'Margaridas', 'Margaridas no jardim com o chalé ao fundo', 'externo', 720, 1280),
   p('chale-portao-entrada', 'Portão', 'Portão de madeira branco com o chalé e as araucárias ao fundo', 'externo', 899, 1599),
+];
+
+/**
+ * Carrossel da capa do Início: as melhores fotos, na ordem em que aparecem.
+ * `file` é a foto do computador (use só fotos com 1280 px ou mais de largura);
+ * `mobile` (opcional) é a foto usada no celular, de preferência vertical.
+ */
+export const HERO_SLIDES: { file: string; mobile?: string; title: string; alt: string }[] = [
+  {
+    file: 'chale-varanda-entrada',
+    mobile: 'chale-fachada-araucarias',
+    title: 'Fachada e varanda',
+    alt: 'Fachada do Chalé Gran Reserva, chalé de madeira entre araucárias em Monte Verde',
+  },
+  {
+    file: 'sala-poltronas-tv',
+    mobile: 'sala-lareira',
+    title: 'Sala com lareira',
+    alt: 'Sala do chalé com lareira de pedra, poltronas e sofá',
+  },
+  {
+    file: 'quarto-solteiros',
+    mobile: 'quarto-vista',
+    title: 'Quartos',
+    alt: 'Quarto com teto inclinado de madeira, camas de solteiro e janela para a mata',
+  },
+  {
+    file: 'mesa-jantar',
+    mobile: 'sala-jantar',
+    title: 'Mesa de jantar',
+    alt: 'Mesa de jantar de madeira com flores e cristaleira',
+  },
+  { file: 'deck-madeira-mata', title: 'Deck junto à mata', alt: 'Deck de madeira com escada, junto à mata' },
+  { file: 'cozinha-copa', title: 'Copa e cozinha', alt: 'Copa do chalé com bancada e janelas de madeira para o jardim' },
 ];
 
 export const PHOTO_CATEGORIES: { id: PhotoCategory | 'todas'; label: string }[] = [
@@ -218,7 +252,7 @@ export const SPACES = [
   },
   {
     id: 'quartos',
-    title: 'Dois quartos',
+    title: '2 quartos',
     text: 'Os quartos têm teto inclinado de madeira e janela para a mata. Um tem cama de casal e o outro, camas de solteiro.',
     image: 'suite-casal',
     features: ['Quarto de casal', 'Camas de solteiro', 'Roupa de cama', 'Aquecimento'],
@@ -260,8 +294,8 @@ export const AMENITIES: { icon: AmenityIcon; title: string; text: string }[] = [
   { icon: 'utensils', title: 'Cozinha equipada', text: 'Para todas as refeições' },
   { icon: 'tv', title: 'TV de tela plana', text: 'Com canais via satélite' },
   { icon: 'thermometer', title: 'Aquecimento', text: 'Para as noites frias' },
-  { icon: 'bed', title: 'Roupa de cama', text: 'Nos dois quartos' },
-  { icon: 'bath', title: '2 banheiros', text: 'Com box de vidro e toalhas' },
+  { icon: 'bed', title: 'Roupa de cama', text: 'Nos 2 quartos' },
+  { icon: 'bath', title: '2 banheiros', text: 'Toalhas disponíveis' },
   { icon: 'mountain', title: 'Varanda', text: 'Com vista para a serra' },
   { icon: 'trees', title: 'Jardim e deck', text: 'Entre araucárias' },
   { icon: 'paw', title: 'Pets', text: 'Aceitos mediante consulta' },

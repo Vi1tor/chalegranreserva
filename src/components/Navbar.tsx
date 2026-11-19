@@ -36,7 +36,7 @@ export function Navbar({ current, overHero = false }: NavbarProps) {
       <div className="container-site flex h-[4.5rem] items-center justify-between gap-6">
         <a href="/" className="flex shrink-0 items-center gap-3" aria-label={`${SITE.name}, página inicial`}>
           <img src="/brand/logo-256.webp" alt="" width={48} height={48} className="h-12 w-12 rounded-full" />
-          <span className="font-serif text-lg leading-tight font-medium">Chalé Gran Reserva</span>
+          <span translate="no" className="font-serif text-lg leading-tight font-medium">Chalé Gran Reserva</span>
         </a>
 
         <nav aria-label="Principal" className="hidden lg:block">

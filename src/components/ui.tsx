@@ -88,10 +88,10 @@ export function CtaBand() {
         <div className="flex flex-wrap gap-3">
           <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
             <WhatsAppIcon className="h-5 w-5" />
-            Chamar no WhatsApp
+            Consultar datas no WhatsApp
           </a>
           <a href={pagePath('reservas')} className="btn btn-ghost-light">
-            Ver formulário de reserva
+            Preencher pedido de reserva
           </a>
         </div>
       </div>
@@ -134,8 +134,8 @@ export function FloatingWhatsApp() {
           className="relative mb-2 w-[min(17rem,calc(100vw-6.5rem))] rounded-2xl rounded-br-md bg-white p-4 pr-10 text-ink shadow-lift motion-safe:animate-bubble-in"
         >
           <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" onClick={closeBubble} className="block">
-            <span className="block text-sm font-semibold text-forest">Chalé Gran Reserva</span>
-            <span className="mt-1 block text-[0.95rem] leading-snug">Olá! Quer consultar datas? Chame a gente no WhatsApp.</span>
+            <span translate="no" className="block text-sm font-semibold text-forest">Chalé Gran Reserva</span>
+            <span className="mt-1 block text-[0.95rem] leading-snug">Quer saber se suas datas estão livres? O anfitrião responde pelo WhatsApp.</span>
           </a>
           <button
             type="button"

@@ -44,7 +44,7 @@ export function Lightbox({ photos, index, onClose, onChange }: LightboxProps) {
       role="dialog"
       aria-modal="true"
       aria-label={`Foto ampliada: ${photo.title}`}
-      className="fixed inset-0 z-50 flex flex-col bg-forest-dark/95 text-paper backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex flex-col overscroll-contain bg-forest-dark/95 text-paper backdrop-blur-sm"
       onClick={onClose}
       onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
       onTouchEnd={(e) => {
@@ -74,8 +74,10 @@ export function Lightbox({ photos, index, onClose, onChange }: LightboxProps) {
           key={photo.file}
           src={img(photo.file)}
           alt={photo.alt}
+          width={photo.width}
+          height={photo.height}
           onClick={(e) => e.stopPropagation()}
-          className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+          className="h-auto max-h-full w-auto max-w-full rounded-lg object-contain shadow-2xl"
         />
         {photos.length > 1 && (
           <>

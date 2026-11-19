@@ -212,8 +212,23 @@ export function PoliciesBand({ embedded = false }: { embedded?: boolean }) {
 /* ------------------------------------------------------------------ */
 
 export function GalleryGrid({ limit, filters = true }: { limit?: number; filters?: boolean }) {
-  const [filter, setFilter] = useState<PhotoCategory | 'todas'>('todas');
+  const [filter, setFilterState] = useState<PhotoCategory | 'todas'>('todas');
   const lightbox = useLightbox();
+
+  // O filtro fica no endereço (?ambiente=quartos): dá para compartilhar o link já filtrado.
+  useEffect(() => {
+    if (!filters) return;
+    const fromUrl = new URLSearchParams(window.location.search).get('ambiente');
+    if (fromUrl && PHOTO_CATEGORIES.some((c) => c.id === fromUrl)) setFilterState(fromUrl as PhotoCategory);
+  }, [filters]);
+
+  const setFilter = (next: PhotoCategory | 'todas') => {
+    setFilterState(next);
+    const url = new URL(window.location.href);
+    if (next === 'todas') url.searchParams.delete('ambiente');
+    else url.searchParams.set('ambiente', next);
+    window.history.replaceState(null, '', url);
+  };
   const filtered = filter === 'todas' ? PHOTOS : PHOTOS.filter((item) => item.category === filter);
   const list = limit ? filtered.slice(0, limit) : filtered;
 
@@ -288,7 +303,8 @@ export function ReservationForm() {
   const [guests, setGuests] = useState(2);
   const [guestName, setGuestName] = useState('');
   const [notes, setNotes] = useState('');
-  const [error, setError] = useState<string | null>(null);
+  // Erro ligado ao campo que precisa ser corrigido (aparece embaixo dele e recebe o foco).
+  const [error, setError] = useState<{ field: 'checkin' | 'checkout'; text: string } | null>(null);
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
@@ -310,9 +326,14 @@ export function ReservationForm() {
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
     setError(null);
-    if (!checkIn || !checkOut) return setError('Escolha as datas de entrada e saída.');
-    if (today && checkIn < today) return setError('A data de entrada já passou. Escolha outra.');
-    if (checkOut <= checkIn) return setError('A saída precisa ser depois da entrada.');
+    const fail = (field: 'checkin' | 'checkout', text: string) => {
+      setError({ field, text });
+      document.getElementById(field)?.focus();
+    };
+    if (!checkIn) return fail('checkin', 'Escolha a data de entrada.');
+    if (!checkOut) return fail('checkout', 'Escolha a data de saída.');
+    if (today && checkIn < today) return fail('checkin', 'Essa data já passou. Escolha a partir de hoje.');
+    if (checkOut <= checkIn) return fail('checkout', 'Escolha uma saída depois da entrada.');
     const url = buildWhatsAppUrl(message);
     if (url) {
       window.open(url, '_blank', 'noopener,noreferrer');
@@ -327,7 +348,20 @@ export function ReservationForm() {
           <label htmlFor="checkin" className={label}>
             Entrada
           </label>
-          <input id="checkin" name="checkin" type="date" min={today || undefined} value={checkIn} onChange={(e) => onCheckInChange(e.target.value)} required className={field} />
+          <input
+            id="checkin"
+            name="checkin"
+            type="date"
+            autoComplete="off"
+            min={today || undefined}
+            value={checkIn}
+            onChange={(e) => onCheckInChange(e.target.value)}
+            required
+            aria-invalid={error?.field === 'checkin' || undefined}
+            aria-describedby={error?.field === 'checkin' ? 'erro-checkin' : undefined}
+            className={field}
+          />
+          <FieldError id="erro-checkin" text={error?.field === 'checkin' ? error.text : null} />
         </div>
         <div>
           <label htmlFor="checkout" className={label}>
@@ -337,6 +371,7 @@ export function ReservationForm() {
             id="checkout"
             name="checkout"
             type="date"
+            autoComplete="off"
             min={checkIn ? addDaysIso(checkIn, 1) : today || undefined}
             value={checkOut}
             onChange={(e) => {
@@ -344,14 +379,17 @@ export function ReservationForm() {
               setCheckOut(e.target.value);
             }}
             required
+            aria-invalid={error?.field === 'checkout' || undefined}
+            aria-describedby={error?.field === 'checkout' ? 'erro-checkout' : undefined}
             className={field}
           />
+          <FieldError id="erro-checkout" text={error?.field === 'checkout' ? error.text : null} />
         </div>
         <div>
           <label htmlFor="guests" className={label}>
             Pessoas
           </label>
-          <select id="guests" name="guests" value={guests} onChange={(e) => setGuests(Number(e.target.value))} className={field}>
+          <select id="guests" name="guests" autoComplete="off" value={guests} onChange={(e) => setGuests(Number(e.target.value))} className={field}>
             {[1, 2, 3, 4, 5, 6].map((n) => (
               <option key={n} value={n}>
                 {n} {n === 1 ? 'pessoa' : 'pessoas'}
@@ -372,6 +410,7 @@ export function ReservationForm() {
           <textarea
             id="notes"
             name="notes"
+            autoComplete="off"
             rows={3}
             placeholder="Horário de chegada, se vai levar pet, crianças…"
             value={notes}
@@ -387,12 +426,6 @@ export function ReservationForm() {
           : 'Escolha um período válido.'}
       </p>
 
-      {error && (
-        <p role="alert" className="mt-3 font-medium text-[#9b2c1f]">
-          {error}
-        </p>
-      )}
-
       <button type="submit" className="btn btn-whatsapp mt-6 w-full sm:w-auto">
         <WhatsAppIcon className="h-5 w-5" />
         Enviar pedido pelo WhatsApp
@@ -403,6 +436,14 @@ export function ReservationForm() {
         </p>
       )}
     </form>
+  );
+}
+
+function FieldError({ id, text }: { id: string; text: string | null }) {
+  return (
+    <p id={id} role="alert" className="mt-1.5 min-h-0 text-sm font-medium text-[#9b2c1f]">
+      {text}
+    </p>
   );
 }
 

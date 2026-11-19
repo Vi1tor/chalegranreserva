@@ -1,46 +1,29 @@
 import { ArrowRight } from 'lucide-react';
 import { HIGHLIGHTS, REVIEWS, SPACES, img, pagePath, photo } from '../data/site';
+import { HeroCarousel } from '../components/HeroCarousel';
 import { AmenitiesGrid } from '../components/sections';
 import { CtaBand, RatingCards, SectionHeading } from '../components/ui';
 
 export function Home() {
   return (
     <>
-      {/* Capa */}
-      <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-forest-dark text-paper">
-        <picture>
-          <source media="(min-width: 768px)" srcSet={img('chale-varanda-entrada')} />
-          <img
-            src={img('chale-fachada-araucarias', true)}
-            width={450}
-            height={800}
-            alt="Chalé Gran Reserva: chalé de madeira entre araucárias, em Monte Verde"
-            fetchPriority="high"
-            className="absolute inset-0 -z-10 h-full w-full object-cover"
-          />
-        </picture>
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-forest-dark/90 via-forest-dark/40 to-forest-dark/30" aria-hidden="true" />
-
-        <div className="container-site pt-32 pb-16 sm:pb-24">
-          <div className="max-w-3xl motion-safe:animate-hero-in">
-            <h1>
-              <span className="block font-sans text-lg font-normal text-paper/90">Chalé em Monte Verde, Minas Gerais</span>
-              <span className="mt-3 block text-5xl leading-[1.05] sm:text-7xl lg:text-[5.5rem]">Chalé Gran Reserva</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-xl leading-relaxed text-paper/90">
-              Chalé de madeira com lareira, para até 6 pessoas, entre araucárias. A casa inteira é sua durante a estadia.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <a href={pagePath('reservas')} className="btn btn-copper">
-                Consultar datas
-              </a>
-              <a href={pagePath('chale')} className="btn btn-ghost-light">
-                Conhecer o chalé
-              </a>
-            </div>
+      {/* Capa com carrossel das melhores fotos */}
+      <HeroCarousel>
+        <div className="max-w-3xl motion-safe:animate-hero-in">
+          <h1>
+            <span className="block font-sans text-lg font-normal text-paper/90">Chalé em Monte Verde, Minas Gerais</span>
+            <span translate="no" className="mt-3 block text-5xl leading-[1.05] sm:text-7xl lg:text-[5.5rem]">Chalé Gran Reserva</span>
+          </h1>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a href={pagePath('reservas')} className="btn btn-copper">
+              Consultar datas e valores
+            </a>
+            <a href={pagePath('chale')} className="btn btn-ghost-light">
+              Conhecer o chalé
+            </a>
           </div>
         </div>
-      </section>
+      </HeroCarousel>
 
       {/* Boas-vindas */}
       <section className="py-20 sm:py-28">
@@ -50,7 +33,7 @@ export function Home() {
             <div className="prose-site mt-6 text-lg leading-relaxed text-ink/80">
               <p>
                 O Gran Reserva fica nas Villas de Monte Verde, cercado de araucárias e a cerca de 5 km do centro. Por
-                dentro é madeira do piso ao teto: sala com lareira de pedra, cozinha completa e dois quartos
+                dentro é madeira do piso ao teto: sala com lareira de pedra, cozinha completa e 2 quartos
                 aconchegantes.
               </p>
               <p>
@@ -109,7 +92,7 @@ export function Home() {
       <section className="bg-paper-2 py-20 sm:py-28">
         <div className="container-site">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <SectionHeading title="Os ambientes" intro="Sala com lareira, dois quartos, cozinha equipada e área externa com varanda, deck e jardim." />
+            <SectionHeading title="Os ambientes" intro="Sala com lareira, 2 quartos, cozinha equipada e área externa com varanda, deck e jardim." />
             <a href={pagePath('chale')} className="btn btn-outline self-start md:self-auto">
               Ver o chalé completo
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -16,11 +16,13 @@ function sanitizePhoneDigits(phone: string): string {
   return digits;
 }
 
+const DATE_FORMAT = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' });
+
 export function formatDatePtBr(isoDate: string): string {
   if (!isoDate) return '—';
-  const [year, month, day] = isoDate.split('-');
+  const [year, month, day] = isoDate.split('-').map(Number);
   if (!year || !month || !day) return isoDate;
-  return `${day}/${month}/${year}`;
+  return DATE_FORMAT.format(new Date(Date.UTC(year, month - 1, day)));
 }
 
 export function toIsoDate(date: Date): string {

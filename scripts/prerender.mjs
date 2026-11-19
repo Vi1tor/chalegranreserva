@@ -89,7 +89,21 @@ const breadcrumb = (page) => ({
   ],
 });
 
-const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+let template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+
+// Desempenho: embute o CSS (evita uma requisição que trava a renderização) e pré-carrega as fontes principais.
+const cssLink = template.match(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/);
+if (cssLink) {
+  const css = fs.readFileSync(path.join(dist, cssLink[1]), 'utf8');
+  template = template.replace(cssLink[0], () => `<style>${css}</style>`);
+}
+const assetFiles = fs.readdirSync(path.join(dist, 'assets'));
+const fontPreloads = ['inter-latin-wght-normal', 'playfair-display-latin-wght-normal']
+  .map((name) => assetFiles.find((f) => f.startsWith(name) && f.endsWith('.woff2')))
+  .filter(Boolean)
+  .map((f) => `<link rel="preload" as="font" type="font/woff2" href="/assets/${f}" crossorigin />`)
+  .join('\n    ');
+template = template.replace('<!--page-head-->', `<!--page-head-->\n    ${fontPreloads}`);
 if (!template.includes('<!--app-html-->') || !template.includes('<!--page-head-->')) {
   throw new Error('Marcadores <!--app-html--> ou <!--page-head--> não encontrados em index.html');
 }

@@ -15,8 +15,8 @@ export function Galeria() {
         <div className="container-site">
           <p className="mb-10 max-w-3xl text-lg leading-relaxed text-ink/80">
             O Chalé Gran Reserva é todo de madeira e fica entre araucárias nas Villas de Monte Verde (MG). Nas fotos
-            estão a fachada e o jardim, a sala com lareira de pedra, a mesa de jantar, os dois quartos, a cozinha
-            equipada, os dois banheiros, a varanda de cima e o deck junto à mata. Use os filtros para ver cada ambiente.
+            estão a fachada e o jardim, a sala com lareira de pedra, a mesa de jantar, os 2 quartos, a cozinha
+            equipada, os 2 banheiros, a varanda de cima e o deck junto à mata. Use os filtros para ver cada ambiente.
           </p>
           <GalleryGrid />
         </div>

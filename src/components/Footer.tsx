@@ -10,7 +10,7 @@ export function Footer() {
         <div className="md:col-span-5">
           <a href="/" className="flex items-center gap-4">
             <img src="/brand/logo-256.webp" alt="Logo do Chalé Gran Reserva" width={88} height={88} loading="lazy" className="h-22 w-22 rounded-full" />
-            <span className="font-serif text-2xl text-paper">Chalé Gran Reserva</span>
+            <span translate="no" className="font-serif text-2xl text-paper">Chalé Gran Reserva</span>
           </a>
           <p className="mt-6 max-w-sm leading-relaxed">
             Chalé de madeira com lareira para até 6 pessoas, entre araucárias, em Monte Verde, na Serra da Mantiqueira.

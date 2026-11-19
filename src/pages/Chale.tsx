@@ -8,7 +8,7 @@ export function Chale() {
         page="chale"
         image="sala-poltronas-tv"
         title="O chalé em Monte Verde"
-        intro="Um chalé de madeira com sala e lareira, dois quartos, dois banheiros, cozinha equipada, varanda, deck e jardim."
+        intro="Um chalé de madeira com sala e lareira, 2 quartos, 2 banheiros, cozinha equipada, varanda, deck e jardim."
       />
 
       <section aria-labelledby="ambientes-titulo" className="py-20 sm:py-28">
