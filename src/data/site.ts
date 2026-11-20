@@ -69,7 +69,7 @@ export const PAGES: PageMeta[] = [
     label: 'Galeria',
     title: 'Fotos do chalé em Monte Verde, MG | Chalé Gran Reserva',
     description:
-      '24 fotos reais do Chalé Gran Reserva em Monte Verde: fachada entre araucárias, sala com lareira, quartos, cozinha, banheiros, deck e jardim.',
+      '26 fotos reais do Chalé Gran Reserva em Monte Verde: fachada entre araucárias, sala com lareira, quartos, cozinha, banheiros, deck e jardim.',
   },
   {
     id: 'monteverde',
@@ -173,6 +173,8 @@ const p = (
 ): Photo => ({ file, title, alt, category, width, height, hasSmall });
 
 export const PHOTOS: Photo[] = [
+  p('chale-gramado-araucarias', 'O chalé visto do jardim', 'Chalé Gran Reserva visto do gramado, com escada de pedra, varanda de madeira e araucárias ao fundo, em Monte Verde', 'externo', 1280, 960),
+  p('chale-flores-escadaria', 'Jardim florido', 'Fachada de madeira do chalé com flores vermelhas em primeiro plano e escada de pedra no jardim', 'externo', 1280, 960),
   p('chale-fachada-araucarias', 'Fachada', 'Fachada do chalé de madeira com varanda no andar de cima, entre araucárias, em Monte Verde', 'externo', 899, 1599),
   p('sala-lareira', 'Sala com lareira', 'Sala revestida de madeira com lareira de pedra, lenha empilhada e TV', 'sala', 1024, 768),
   p('suite-casal', 'Quarto de casal', 'Cama de casal com colcha cinza sob o teto inclinado de madeira', 'quartos', 1024, 768),

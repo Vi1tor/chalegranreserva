@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { HIGHLIGHTS, REVIEWS, SPACES, img, pagePath, photo } from '../data/site';
+import { HIGHLIGHTS, PHOTOS, REVIEWS, SPACES, img, pagePath, photo } from '../data/site';
 import { HeroCarousel } from '../components/HeroCarousel';
 import { AmenitiesGrid } from '../components/sections';
 import { CtaBand, RatingCards, SectionHeading } from '../components/ui';
@@ -166,7 +166,7 @@ export function Home() {
           </div>
           <div className="mt-8 text-center">
             <a href={pagePath('galeria')} className="btn btn-outline">
-              Ver as 24 fotos
+              Ver as {PHOTOS.length} fotos
             </a>
           </div>
         </div>

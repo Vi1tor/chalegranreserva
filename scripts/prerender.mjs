@@ -26,7 +26,7 @@ const lodging = {
   url: `${SITE_URL}/`,
   description:
     'Chalé de madeira com lareira, para até 6 pessoas em Monte Verde (Camanducaia, MG), na Serra da Mantiqueira. 2 quartos, 2 banheiros, cozinha equipada, varanda, deck, jardim e estacionamento no terreno.',
-  image: PHOTOS.slice(0, 6).map((p) => abs(`/images/${p.file}.webp`)),
+  image: PHOTOS.slice(0, 8).map((p) => abs(`/images/${p.file}.webp`)),
   logo: abs('/brand/logo-512.webp'),
   telephone: `+55${SITE.whatsappNumber}`,
   address: {
