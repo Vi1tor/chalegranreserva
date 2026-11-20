@@ -211,16 +211,15 @@ export function PoliciesBand({ embedded = false }: { embedded?: boolean }) {
 /* Galeria                                                             */
 /* ------------------------------------------------------------------ */
 
-export function GalleryGrid({ limit, filters = true }: { limit?: number; filters?: boolean }) {
+export function GalleryGrid() {
   const [filter, setFilterState] = useState<PhotoCategory | 'todas'>('todas');
   const lightbox = useLightbox();
 
   // O filtro fica no endereço (?ambiente=quartos): dá para compartilhar o link já filtrado.
   useEffect(() => {
-    if (!filters) return;
     const fromUrl = new URLSearchParams(window.location.search).get('ambiente');
     if (fromUrl && PHOTO_CATEGORIES.some((c) => c.id === fromUrl)) setFilterState(fromUrl as PhotoCategory);
-  }, [filters]);
+  }, []);
 
   const setFilter = (next: PhotoCategory | 'todas') => {
     setFilterState(next);
@@ -230,39 +229,36 @@ export function GalleryGrid({ limit, filters = true }: { limit?: number; filters
     window.history.replaceState(null, '', url);
   };
   const filtered = filter === 'todas' ? PHOTOS : PHOTOS.filter((item) => item.category === filter);
-  const list = limit ? filtered.slice(0, limit) : filtered;
 
   return (
     <div>
-      {filters && (
-        <div role="group" aria-label="Filtrar fotos" className="mb-8 flex flex-wrap gap-2">
-          {PHOTO_CATEGORIES.map((category) => {
-            const active = filter === category.id;
-            return (
-              <button
-                key={category.id}
-                type="button"
-                aria-pressed={active}
-                onClick={() => setFilter(category.id)}
-                className={`min-h-11 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  active ? 'bg-forest text-paper' : 'border border-forest/20 bg-white/70 text-forest hover:border-forest/50'
-                }`}
-              >
-                {category.label}
-              </button>
-            );
-          })}
-        </div>
-      )}
+      <div role="group" aria-label="Filtrar fotos" className="mb-8 flex flex-wrap gap-2">
+        {PHOTO_CATEGORIES.map((category) => {
+          const active = filter === category.id;
+          return (
+            <button
+              key={category.id}
+              type="button"
+              aria-pressed={active}
+              onClick={() => setFilter(category.id)}
+              className={`min-h-11 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                active ? 'bg-forest text-paper' : 'border border-forest/20 bg-white/70 text-forest hover:border-forest/50'
+              }`}
+            >
+              {category.label}
+            </button>
+          );
+        })}
+      </div>
 
       <ul className="grid grid-flow-dense auto-rows-[9rem] grid-cols-2 gap-3 sm:auto-rows-[12rem] md:grid-cols-3 lg:grid-cols-4 lg:auto-rows-[13rem]">
-        {list.map((item, index) => {
+        {filtered.map((item, index) => {
           const tall = item.height > item.width;
           return (
             <li key={item.file} className={tall ? 'row-span-2' : ''}>
               <button
                 type="button"
-                onClick={() => lightbox.open(list, index)}
+                onClick={() => lightbox.open(filtered, index)}
                 aria-label={`Ampliar foto: ${item.title}`}
                 className="group relative block h-full w-full cursor-zoom-in overflow-hidden rounded-xl bg-paper-2"
               >

@@ -22,6 +22,7 @@ npm run preview   # serve o dist/ localmente
 | URL definitiva do site (canonical, sitemap, Open Graph) | `.env` → `VITE_SITE_URL` |
 | Textos, WhatsApp, endereço, notas, comodidades, FAQ, depoimentos | `src/data/site.ts` |
 | Fotos (WebP) | `public/images/` |
+| Fontes (Inter e Playfair, só alfabeto latino, licença OFL) | `src/assets/fonts/` |
 | Logo (versões do site e favicon) | `public/brand/`, gerado de `design/logo-original.png` |
 | Resumo do chalé para assistentes de IA | `public/llms.txt` |
 | Cores e fontes | `src/index.css` (`@theme`) |

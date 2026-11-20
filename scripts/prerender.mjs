@@ -12,7 +12,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
 const serverDir = path.join(root, 'dist-server');
 
-const { render, SITE, SITE_URL, FAQS, PHOTOS, PAGES } = await import(pathToFileURL(path.join(serverDir, 'entry-server.js')).href);
+const { render, SITE, SITE_URL, FAQS, PHOTOS, PAGES, HERO_SLIDES } = await import(pathToFileURL(path.join(serverDir, 'entry-server.js')).href);
 
 const abs = (p) => `${SITE_URL}${p}`;
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -96,6 +96,7 @@ const cssLink = template.match(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]
 if (cssLink) {
   const css = fs.readFileSync(path.join(dist, cssLink[1]), 'utf8');
   template = template.replace(cssLink[0], () => `<style>${css}</style>`);
+  fs.rmSync(path.join(dist, cssLink[1])); // já está embutido em todas as páginas
 }
 const assetFiles = fs.readdirSync(path.join(dist, 'assets'));
 const fontPreloads = ['inter-latin-wght-normal', 'playfair-display-latin-wght-normal']
@@ -128,7 +129,7 @@ for (const page of PAGES) {
     `<meta property="og:title" content="${esc(page.title)}" />`,
     `<meta property="og:description" content="${esc(page.description)}" />`,
     page.id === 'inicio'
-      ? '<link rel="preload" as="image" href="/images/chale-varanda-entrada.webp" media="(min-width: 768px)" fetchpriority="high" />\n    <link rel="preload" as="image" href="/images/chale-fachada-araucarias-sm.webp" media="(max-width: 767px)" fetchpriority="high" />'
+      ? `<link rel="preload" as="image" href="/images/${HERO_SLIDES[0].file}.webp" media="(min-width: 768px)" fetchpriority="high" />\n    <link rel="preload" as="image" href="/images/${HERO_SLIDES[0].mobile ?? HERO_SLIDES[0].file}-sm.webp" media="(max-width: 767px)" fetchpriority="high" />`
       : '',
     ...blocks,
   ]

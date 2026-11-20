@@ -206,31 +206,15 @@ export const PHOTOS: Photo[] = [
  */
 export const HERO_SLIDES: { file: string; mobile?: string; title: string; alt: string }[] = [
   {
-    file: 'chale-varanda-entrada',
-    mobile: 'chale-fachada-araucarias',
-    title: 'Fachada e varanda',
-    alt: 'Fachada do Chalé Gran Reserva, chalé de madeira entre araucárias em Monte Verde',
+    file: 'chale-gramado-araucarias',
+    title: 'O chalé visto do jardim',
+    alt: 'Chalé Gran Reserva visto do gramado, com escada de pedra, varanda de madeira e araucárias ao fundo, em Monte Verde',
   },
   {
-    file: 'sala-poltronas-tv',
-    mobile: 'sala-lareira',
-    title: 'Sala com lareira',
-    alt: 'Sala do chalé com lareira de pedra, poltronas e sofá',
+    file: 'chale-flores-escadaria',
+    title: 'Jardim florido',
+    alt: 'Fachada de madeira do chalé com flores vermelhas em primeiro plano e escada de pedra no jardim',
   },
-  {
-    file: 'quarto-solteiros',
-    mobile: 'quarto-vista',
-    title: 'Quartos',
-    alt: 'Quarto com teto inclinado de madeira, camas de solteiro e janela para a mata',
-  },
-  {
-    file: 'mesa-jantar',
-    mobile: 'sala-jantar',
-    title: 'Mesa de jantar',
-    alt: 'Mesa de jantar de madeira com flores e cristaleira',
-  },
-  { file: 'deck-madeira-mata', title: 'Deck junto à mata', alt: 'Deck de madeira com escada, junto à mata' },
-  { file: 'cozinha-copa', title: 'Copa e cozinha', alt: 'Copa do chalé com bancada e janelas de madeira para o jardim' },
 ];
 
 export const PHOTO_CATEGORIES: { id: PhotoCategory | 'todas'; label: string }[] = [
